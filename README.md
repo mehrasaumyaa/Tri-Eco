@@ -109,7 +109,7 @@ Tri-Eco aims to reduce waste by providing a safe and easy method for students to
   * Dashboard 
   * Profile
   * Click picture
-    *. Camera
+    * Camera
         * Accept
             * Post => Dashboard (updated)
             * Cancel => Camera
