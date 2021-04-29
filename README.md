@@ -126,8 +126,8 @@ Tri-Eco aims to reduce waste by providing a safe and easy method for students to
 
 
 ## Wireframes
-https://github.com/oshevchuk27/Tri-Eco/blob/main/IMG-2492.JPG
-(saved image posted on another file outside of readme) 
+<img src = 'https://github.com/oshevchuk27/Tri-Eco/blob/main/IMG-2492.JPG' />
+
 
 ### [BONUS] Digital Wireframes & Mockups
 
