@@ -208,6 +208,10 @@ Sell
       ```
  
       - (Delete) Delete existing post object
+      
+      ```java
+      myObject.deleteInBackground();
+      ```
      
 - Profile screen
       - (Read/GET) Query logged in user object
