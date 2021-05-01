@@ -168,7 +168,8 @@ Sell
 |Post/Cancel   |Relation to Post  |Options to post or remove a post|
 
 ### Networking
-- Parse Network Request for Databases
-  -  User database
-  -  Post database
+#### List of network requests by screen
+- Dashboard screen
+      - (Read/GET) Query all posts where user is author
+
 
