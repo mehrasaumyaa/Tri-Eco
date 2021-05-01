@@ -172,9 +172,8 @@ Sell
 - Dashboard screen
       - (Read/GET) Query all posts where user is author
      
-              
-          ```java     
-           ParseQuery<ParseObject> query = ParseQuery.getQuery("GameScore");
+     ```java
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("GameScore");
            query.whereEqualTo("playerName", currentUser);
            query.findInBackground(new FindCallback<ParseObject>() {
               public void done(List<ParseObject> scoreList, ParseException e) {
@@ -184,8 +183,8 @@ Sell
                      Log.d("score", "Error: " + e.getMessage());
                  }
               }
-           });
-           ```
+           });       
+        ```
        
 -  Sell screen
       - (Create/POST) Create a new post object
