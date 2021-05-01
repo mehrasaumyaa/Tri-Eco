@@ -171,5 +171,18 @@ Sell
 #### List of network requests by screen
 - Dashboard screen
       - (Read/GET) Query all posts where user is author
+               ```
+         ParseQuery<ParseObject> query = ParseQuery.getQuery("GameScore");
+query.whereEqualTo("playerName", currentUser);
+query.findInBackground(new FindCallback<ParseObject>() {
+    public void done(List<ParseObject> scoreList, ParseException e) {
+        if (e == null) {
+            Log.d("score", "Retrieved " + scoreList.size() + " scores");
+        } else {
+            Log.d("score", "Error: " + e.getMessage());
+        }
+    }
+});
+         ```
 
 
