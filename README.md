@@ -171,7 +171,8 @@ Sell
 #### List of network requests by screen
 - Dashboard screen
       - (Read/GET) Query all posts where user is author
-               ```java
+     
+              
                
            ParseQuery<ParseObject> query = ParseQuery.getQuery("GameScore");
            query.whereEqualTo("playerName", currentUser);
@@ -184,6 +185,7 @@ Sell
                  }
               }
            });
-         ```
+           
+         
 
 
