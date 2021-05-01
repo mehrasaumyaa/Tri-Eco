@@ -134,7 +134,38 @@ Tri-Eco aims to reduce waste by providing a safe and easy method for students to
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
+Data Models 
+
+Post
+| Property      | Type          |Description  |
+| ------------- |:-------------:| -----:      |
+| objectId      |String              |Unique ID for user post      |
+| author        | Pointer to User    |   Posts user name |
+| image         | File               | Iamge that user posts |
+| caption       |String         |Caption posted by user      |
+| createdAt     | DateTime      |Post when created |
+| updatedAt     | DateTime      |Update when last posted |
+| contact       | Pointer to User      |Directs user to contact info |
+
+User 
+
+| Property      | Type          |Description  |
+| ------------- |:-------------:| -----:      |
+| objectId      |String          |Display user name |
+| email         |String          |Display email of user |
+| image         | File           |Display user profile image |
+| caption       |String          |Display telephone number |
+| createdAt     | DateTime       |Display school within trico |
+
+Sell
+| Property     | Type             | Description  |
+| -------------|:-------------:   | -----:      |
+|objectId      |String            |Label product name |
+|price         |String            |Input price info of product |
+|image         |File              |Display captured image |
+|caption       |String            |Display telephone number |
+|Post/Cancel   |Relation to Post  |Options to post or remove a post|
 
 ### Networking
 - Parse Network Request for Databases
