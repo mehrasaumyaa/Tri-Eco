@@ -173,7 +173,7 @@ Sell
       - (Read/GET) Query all posts where user is author
      
               
-               
+          ```java     
            ParseQuery<ParseObject> query = ParseQuery.getQuery("GameScore");
            query.whereEqualTo("playerName", currentUser);
            query.findInBackground(new FindCallback<ParseObject>() {
@@ -185,10 +185,29 @@ Sell
                  }
               }
            });
+           ```
        
 -  Sell screen
       - (Create/POST) Create a new post object
       - (Update/PUT) Update existing post object
+
+      ```java
+      ParseQuery<ParseObject> query = ParseQuery.getQuery("GameScore");
+
+      // Retrieve the object by id
+      query.getInBackground("xWMyZ4YEGZ", new GetCallback<ParseObject>() {
+        public void done(ParseObject gameScore, ParseException e) {
+          if (e == null) {
+            // Now let's update it with some new data. In this case, only cheatMode and score
+            // will get sent to your Parse Server. playerName hasn't changed.
+            gameScore.put("score", 1338);
+            gameScore.put("cheatMode", true);
+            gameScore.saveInBackground();
+          }
+        }
+      });
+      ```
+ 
       - (Delete) Delete existing post object
      
 - Profile screen
