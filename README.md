@@ -185,6 +185,17 @@ Sell
                  }
               }
            });
+       
+-  Sell screen
+      - (Create/POST) Create a new post object
+      - (Update/PUT) Update existing post object
+      - (Delete) Delete existing post object
+     
+- Profile screen
+      - (Read/GET) Query logged in user object
+      - (Update/PUT) Update user profile image
+      - (Update/PUT) Update user name
+      - (Update/PUT) Update user email
            
          
 
