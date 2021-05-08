@@ -29,6 +29,7 @@ Tri-Eco aims to reduce waste by providing a safe and easy method for students to
 
 **Required Must-have Stories**
 
+- [x] set up Login activity 
 * Users can Login
 * Users can register (Name, email, college; Bryn Mawr College, Haverford College, Swarthmore College, Profile)
 * Users can take pictures, write descriptions of items they want to sell, and post
