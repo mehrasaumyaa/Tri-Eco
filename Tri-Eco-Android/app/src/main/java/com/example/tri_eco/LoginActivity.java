@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        if(ParseUser.getCurrentUser()!=null){
+        if (ParseUser.getCurrentUser() != null) {
             goMainActivity();
         }
         etUsername = findViewById(R.id.etUsername);
@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                 Log.i(TAG, "onClick login button");
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
-                loginUser(username,password);
+                loginUser(username, password);
             }
         });
 
@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //TODO: fix this error please. It is definitely something super small.
-                Intent i = new Intent(this, SignupActivity.class);
+                Intent i = new Intent (this, SignupActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -66,8 +66,8 @@ public class LoginActivity extends AppCompatActivity {
             public void done(ParseUser user, ParseException e) {
                 //if there is a problem, e will not be null
                 if (e != null) {
-                    Log.e(TAG, "Issue with login", e);
-                    Toast.makeText(LoginActivity.this, "Issue with Login",Toast.LENGTH_SHORT).show();
+                    Log.e(TAG, "Incorrect username or password", e);
+                    Toast.makeText(LoginActivity.this, "Issue with Login", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 //if login successful, go to MainActivity
