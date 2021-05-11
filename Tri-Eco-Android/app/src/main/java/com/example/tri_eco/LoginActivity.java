@@ -29,9 +29,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        if (ParseUser.getCurrentUser() != null) {
+     /*   if (ParseUser.getCurrentUser() != null) {
             goMainActivity();
-        }
+        }*/
+
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
@@ -47,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        btnSignup.setOnClickListener(new View.OnClickListener() {
+      /*  btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //TODO: fix this error please. It is definitely something super small.
@@ -55,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(i);
                 finish();
             }
-        });
+        });*/
     }
 
     private void loginUser(String username, String password){
@@ -77,9 +78,8 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-
     private void goMainActivity(){
-        Intent i = new Intent(this,MainActivity.class);
+        Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
         finish();
     }

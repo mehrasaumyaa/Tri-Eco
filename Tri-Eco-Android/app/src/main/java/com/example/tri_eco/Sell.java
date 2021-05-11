@@ -7,7 +7,7 @@ import com.parse.ParseUser;
 
 @ParseClassName("Sell")
 public class Sell extends ParseObject {
-    //TODO: match field names with variables here
+    public static final String KEY_TITLE = "title";
     public static final String KEY_DESCRIPTION = "description";
     public static final String KEY_PRICE = "price";
     public static final String KEY_CONDITION = "condition";
@@ -17,6 +17,9 @@ public class Sell extends ParseObject {
     public static final String KEY_USER = "user";
     public static final String KEY_CREATED_AT = "createdAt";
 
+    public String getTitle(){
+        return getString(KEY_TITLE);
+    }
     public String getDescription(){
         return getString(KEY_DESCRIPTION);
     }
@@ -33,20 +36,34 @@ public class Sell extends ParseObject {
         return getString(KEY_EMAIL);
     }
 
-    public void setDescription(String description){
-        put(KEY_DESCRIPTION, description);
-    }
-
     public ParseFile getImage(){
         return getParseFile(KEY_IMAGE);
     }
 
-    public void setImage(ParseFile parseFile){
-        put(KEY_IMAGE, parseFile);
-    }
-
     public ParseUser getUser(){
         return getParseUser(KEY_USER);
+    }
+
+    public void setTitle(String title){
+        put(KEY_TITLE, title);
+    }
+    public void setDescription(String description){
+        put(KEY_DESCRIPTION, description);
+    }
+
+    public void setPrice(String price){
+        put(KEY_PRICE, price);
+    }
+
+    public void setCondition(String condition){
+        put(KEY_CONDITION, condition);
+    }
+    public void setEmail(String email){
+        put(KEY_EMAIL, email);
+    }
+
+    public void setImage(ParseFile parseFile){
+        put(KEY_IMAGE, parseFile);
     }
 
     public void setUser(ParseUser user){
