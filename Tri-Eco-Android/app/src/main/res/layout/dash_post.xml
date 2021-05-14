@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="213dp"
+        android:layout_height="260dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvCondition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Condition" />
+
+    <TextView
+        android:id="@+id/tvContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="219dp"
+        android:layout_height="52dp"
+        android:text="Description" />
+
+</LinearLayout>
