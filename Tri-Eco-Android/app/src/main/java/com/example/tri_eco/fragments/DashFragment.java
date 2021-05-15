@@ -31,8 +31,8 @@ public class DashFragment extends Fragment {
 
     public static final String TAG = "DashFragment";
     private RecyclerView rvDash;
-    private DashAdapter adapter;
-    private List<Sell> allPosts;
+    protected DashAdapter adapter;
+    protected List<Sell> allPosts;
     public DashFragment() {
         // Required empty public constructor
     }
