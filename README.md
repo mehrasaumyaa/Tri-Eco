@@ -50,6 +50,12 @@ Tri-Eco aims to reduce waste by providing a safe and easy method for students to
 * Users can interact with other users and message each other 
 
 
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+<img src='https://github.com/oshevchuk27/Tri-Eco/blob/main/Tri-Eco-Android/videowalkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
 ### 2. Screen Archetypes
 
 
