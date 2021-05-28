@@ -41,7 +41,7 @@ import static android.app.Activity.RESULT_OK;
  */
 public class SellFragment extends Fragment {
 
-    public static final String TAG = "Compose Fragment";
+    public static final String TAG = "Sell Fragment";
     public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 42;
     private EditText etDescription;
     private EditText etTitle;
@@ -83,12 +83,12 @@ public class SellFragment extends Fragment {
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 launchCamera();
             }
         });
 
-        // queryPosts();
+        //queryPosts();
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -129,60 +129,7 @@ public class SellFragment extends Fragment {
             }
         });
     }
-    private void savePost(String description, String title, String condition, String price, String email, ParseUser currentUser,File photoFile) {
-        Sell post = new Sell();
-        post.setDescription(description);
-        post.setTitle(title);
-        post.setCondition(condition);
-        post.setPrice(price);
-        post.setEmail(email);
-        post.setImage(new ParseFile(photoFile));
-        post.setUser(currentUser);
-        post.saveInBackground(new SaveCallback() {
-            @Override
-            public void done(ParseException e) {
-                if(e!=null){
-                    Log.e(TAG,"Issue with saving post", e);
-                    Toast.makeText(getContext(), "Error saving post", Toast.LENGTH_SHORT).show();
-                }
-                Log.i(TAG, "Post save was successful");
-                etTitle.setText("");
-                etDescription.setText(""); //clear description textbox, don't want the same post twice
-                etPrice.setText("");
-                etCondition.setText("");
-                etEmail.setText("");
-                ivPostImage.setImageResource(0);
-            }
-        });
-    }
 
-
-    protected void queryPosts(){
-        // Specify which class to query
-        ParseQuery<Sell> query = ParseQuery.getQuery(Sell.class);
-        query.include(Sell.KEY_USER);
-        //limit the number of posts to be displayed
-        query.setLimit(20);
-        //newest will come first and oldest will be displayed last acc to mentioned key
-        query.addDescendingOrder(Sell.KEY_CREATED_AT);
-
-        query.findInBackground(new FindCallback<Sell>() {
-            @Override
-            public void done(List<Sell> posts, ParseException e) {
-                if(e!=null){
-                    Log.e(TAG, "Issue with getting posts");
-                    return;
-                }
-                for(Sell post: posts){
-                    Log.i(TAG, "Post: "+ post.getTitle());
-                    Log.i(TAG, "Price: "+ post.getPrice());
-                    Log.i(TAG, "Descrip: "+ post.getDescription());
-                    Log.i(TAG, "Condition: "+ post.getCondition());
-                }
-
-            }
-        });
-    }
     private void launchCamera() {
         // create Intent to take a picture and return control to the calling application
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -233,6 +180,33 @@ public class SellFragment extends Fragment {
 
         // Return the file target for the photo based on filename
         return new File(mediaStorageDir.getPath() + File.separator + fileName);
+    }
+
+    private void savePost(String description, String title, String condition, String price, String email, ParseUser currentUser,File photoFile) {
+        Sell post = new Sell();
+        post.setDescription(description);
+        post.setTitle(title);
+        post.setCondition(condition);
+        post.setPrice(price);
+        post.setEmail(email);
+        post.setImage(new ParseFile(photoFile));
+        post.setUser(currentUser);
+        post.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if(e!=null){
+                    Log.e(TAG,"Issue with saving post", e);
+                    Toast.makeText(getContext(), "Error saving post", Toast.LENGTH_SHORT).show();
+                }
+                Log.i(TAG, "Post save was successful");
+                etTitle.setText("");
+                etDescription.setText(""); //clear description textbox, don't want the same post twice
+                etPrice.setText("");
+                etCondition.setText("");
+                etEmail.setText("");
+                ivPostImage.setImageResource(0);
+            }
+        });
     }
 
 }

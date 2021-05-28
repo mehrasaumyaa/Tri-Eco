@@ -83,6 +83,7 @@ public class DashFragment extends Fragment {
                     Log.i(TAG, "Price: "+ post.getPrice());
                     Log.i(TAG, "Description: "+ post.getDescription());
                     Log.i(TAG, "Condition: "+ post.getCondition());
+                    Log.i(TAG, "Email: " + post.getEmail());
                 }
                 allPosts.addAll(posts);
                 adapter.notifyDataSetChanged();
