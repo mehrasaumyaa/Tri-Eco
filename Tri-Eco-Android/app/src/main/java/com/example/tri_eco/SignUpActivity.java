@@ -14,12 +14,12 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
-public class SignupActivity extends AppCompatActivity {
-    public static final String TAG= "onSignupActivity";
+public class SignUpActivity extends AppCompatActivity {
+    public static final String TAG= "SignupActivity";
     private EditText etUsername;
     private EditText etPassword;
     private EditText etEmail;
-    private Button btnSignup;
+    private Button btnSignUp;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,21 +28,21 @@ public class SignupActivity extends AppCompatActivity {
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         etEmail = findViewById(R.id.etEmail);
-        btnSignup = findViewById(R.id.btnSignup);
+        btnSignUp = findViewById(R.id.btnSignup);
 
-        btnSignup.setOnClickListener(new View.OnClickListener() {
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
                 String email = etEmail.getText().toString();
 
-                signupUser(username,password, email);
+                signUpUser(username,password, email);
             }
         });
     }
 
-    private void signupUser(String username, String password, String email){
+    private void signUpUser(String username, String password, String email){
         // Create the ParseUser
         ParseUser user = new ParseUser();
         // Set core properties
@@ -54,7 +54,7 @@ public class SignupActivity extends AppCompatActivity {
             public void done(ParseException e) {
                 if (e != null) {
                     Log.e(TAG, "Issue with sign up", e);
-                    Toast.makeText(SignupActivity.this, "Issue with sign up",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Issue with sign up",Toast.LENGTH_SHORT).show();
                     return;
                 } else {
                     goMainActivity();

@@ -72,6 +72,7 @@ public class DashAdapter extends RecyclerView.Adapter<DashAdapter.ViewHolder> {
             tvPrice.setText(post.getPrice());
             tvDescription.setText(post.getDescription());
             tvContact.setText(post.getUser().getUsername()); //TODO: switch to another screen for contact
+            tvCondition.setText(post.getCondition());
             ParseFile image = post.getImage();
             tvTime.setText(post.getFormattedTimeStamp());
             if (image != null) {
