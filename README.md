@@ -35,6 +35,7 @@ Tri-Eco aims to reduce waste by providing a safe and easy method for students to
 - [x] Users can take pictures, write descriptions of items they want to sell, and post
 - [x] Users can take accept or retake picture
 - [x] Scroll through dashboard for items available (RecyclerView)
+- [x] Add layout for user profile
 * On choosing an item the user wants to buy, user can access contact info of seller (name, email, college, profile picture)
 * Once transaction made, item removed from database and dashboard
 * Users can create a profile (to sell)
