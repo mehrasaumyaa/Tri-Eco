@@ -76,7 +76,7 @@ public class DashAdapter extends RecyclerView.Adapter<DashAdapter.ViewHolder> {
             tvContact.setText(post.getUser().getUsername()); //TODO: switch to another screen for contact
             tvCondition.setText(post.getCondition());
             ParseFile image = post.getImage();
-            tvTime.setText(post.getFormattedTimeStamp().toString());
+            tvTime.setText(post.getFormattedTimeStamp().toString().substring(0, 19));
             Log.i("Dash Adapter", post.getFormattedTimeStamp().toString());
             if (image != null) {
                 Glide.with(context).load(post.getImage().getUrl()).into(ivImage);
