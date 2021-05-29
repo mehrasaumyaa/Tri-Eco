@@ -5,6 +5,8 @@ import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
+import java.util.Date;
+
 @ParseClassName("Sell")
 public class Sell extends ParseObject {
     public static final String KEY_TITLE = "title";
@@ -44,6 +46,11 @@ public class Sell extends ParseObject {
 
     public ParseUser getUser(){ return getParseUser(KEY_USER); }
 
+    public Date getFormattedTimeStamp () {
+        return getCreatedAt();
+    }
+
+
   // public String getKeyCreatedAt () { return getString(KEY_CREATED_AT); }
 
     //setters
@@ -73,10 +80,6 @@ public class Sell extends ParseObject {
 
     public void setUser(ParseUser user){
         put(KEY_USER, user);
-    }
-
-     public String getFormattedTimeStamp () {
-        return TimeFormatter.getTimeDifference(KEY_CREATED_AT);
     }
 }
 

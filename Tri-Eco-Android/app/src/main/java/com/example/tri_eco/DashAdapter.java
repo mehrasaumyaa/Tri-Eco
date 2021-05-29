@@ -3,6 +3,7 @@ package com.example.tri_eco;
 
 import android.content.Context;
 import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +39,7 @@ public class DashAdapter extends RecyclerView.Adapter<DashAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Sell post = posts.get(position);
         holder.bind(post);
-        holder.tvTime.setText(post.getFormattedTimeStamp());
+        //holder.tvTime.setText(post.getFormattedTimeStamp());
     }
 
     @Override
@@ -75,7 +76,8 @@ public class DashAdapter extends RecyclerView.Adapter<DashAdapter.ViewHolder> {
             tvContact.setText(post.getUser().getUsername()); //TODO: switch to another screen for contact
             tvCondition.setText(post.getCondition());
             ParseFile image = post.getImage();
-            tvTime.setText(post.getFormattedTimeStamp());
+            tvTime.setText(post.getFormattedTimeStamp().toString());
+            Log.i("Dash Adapter", post.getFormattedTimeStamp().toString());
             if (image != null) {
                 Glide.with(context).load(post.getImage().getUrl()).into(ivImage);
             }
