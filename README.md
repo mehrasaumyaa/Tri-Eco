@@ -54,6 +54,9 @@ Tri-Eco aims to reduce waste by providing a safe and easy method for students to
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+
+<img src='https://github.com/oshevchuk27/Tri-Eco/blob/main/Tri-Eco-Android/videowalkthrough1.gif' title='Video Walkthrough1' width='' alt='Video Walkthrough1' />
+
 <img src='https://github.com/oshevchuk27/Tri-Eco/blob/main/Tri-Eco-Android/videowalkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
