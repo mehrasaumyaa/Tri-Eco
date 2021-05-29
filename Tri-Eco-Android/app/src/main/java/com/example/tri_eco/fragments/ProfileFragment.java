@@ -23,30 +23,30 @@ import com.parse.ParseUser;
 import java.util.List;
 
 public class ProfileFragment extends DashFragment {
-    public static final String TAG= "ProfileFragment";
-    private ImageView ivProfile;
-    private TextView tvName;
-    private TextView tvCollege;
-    private TextView tvEmail;
-
-    public ProfileFragment (){
-        //empty constructor
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.profile_fragment, container, false);
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        ivProfile = view.findViewById(R.id.ivProfile);
-        tvName = view.findViewById(R.id.tvName);
-        tvCollege = view.findViewById(R.id.tvCollege);
-        tvEmail = view.findViewById(R.id.tvEmail);
-    }
+//    public static final String TAG= "ProfileFragment";
+//    private ImageView ivProfile;
+//    private TextView tvName;
+//    private TextView tvCollege;
+//    private TextView tvEmail;
+//
+//    public ProfileFragment (){
+//        //empty constructor
+//    }
+//
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+//        // Inflate the layout for this fragment
+//        return inflater.inflate(R.layout.profile_fragment, container, false);
+//    }
+//
+//    @Override
+//    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+//        super.onViewCreated(view, savedInstanceState);
+//        ivProfile = view.findViewById(R.id.ivProfile);
+//        tvName = view.findViewById(R.id.tvName);
+//        tvCollege = view.findViewById(R.id.tvCollege);
+//        tvEmail = view.findViewById(R.id.tvEmail);
+//    }
 
     protected void queryPosts() {
         // Specify which class to query

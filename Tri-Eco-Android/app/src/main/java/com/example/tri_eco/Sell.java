@@ -44,7 +44,7 @@ public class Sell extends ParseObject {
 
     public ParseUser getUser(){ return getParseUser(KEY_USER); }
 
-//    public String getKeyCreatedAt () { return getString(KEY_CREATED_AT); }
+  // public String getKeyCreatedAt () { return getString(KEY_CREATED_AT); }
 
     //setters
     public void setTitle(String title){
@@ -74,9 +74,9 @@ public class Sell extends ParseObject {
     public void setUser(ParseUser user){
         put(KEY_USER, user);
     }
-//
-//    public String getFormattedTimeStamp () {
-//        return TimeFormatter.getTimeDifference(getKeyCreatedAt());
-//    }
+
+     public String getFormattedTimeStamp () {
+        return TimeFormatter.getTimeDifference(KEY_CREATED_AT);
+    }
 }
 
