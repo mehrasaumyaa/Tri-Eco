@@ -62,7 +62,7 @@ public class DashAdapter extends RecyclerView.Adapter<DashAdapter.ViewHolder> {
             tvDescription = itemView.findViewById(R.id.tvDescription);
             tvContact = itemView.findViewById(R.id.tvContact);
             tvCondition = itemView.findViewById(R.id.tvCondition);
-            tvTime = itemView.findViewById(R.id.tvTime);
+//            tvTime = itemView.findViewById(R.id.tvTime);
 
         }
 
@@ -74,7 +74,7 @@ public class DashAdapter extends RecyclerView.Adapter<DashAdapter.ViewHolder> {
             tvContact.setText(post.getUser().getUsername()); //TODO: switch to another screen for contact
             tvCondition.setText(post.getCondition());
             ParseFile image = post.getImage();
-            tvTime.setText(post.getFormattedTimeStamp());
+//            tvTime.setText(post.getFormattedTimeStamp());
             if (image != null) {
                 Glide.with(context).load(post.getImage().getUrl()).into(ivImage);
             }
