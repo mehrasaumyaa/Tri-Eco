@@ -25,9 +25,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tri_eco.DashAdapter;
+import com.example.tri_eco.LoginActivity;
 import com.example.tri_eco.Profile;
 import com.example.tri_eco.R;
 import com.example.tri_eco.Sell;
+import com.example.tri_eco.SignUpActivity;
 import com.example.tri_eco.User;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -56,6 +58,7 @@ public class ProfileFragment extends Fragment {
     private TextView tvEmail;
     private File profilePicture;
     private Button btnSaveProfile;
+    private Button btnLogOut;
 
     public ProfileFragment (){
         //empty constructor
@@ -97,13 +100,29 @@ public class ProfileFragment extends Fragment {
                 saveProfilePicture();
             }
         });
+
+        btnLogOut = view.findViewById(R.id.btnLogOut);
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getContext(), LoginActivity.class);
+                startActivity(i);
+
+            }
+
+
+        });
+        User user = new User();
         tvCollege = view.findViewById(R.id.tvCollege);
         tvEmail = view.findViewById(R.id.tvEmail);
         tvName.setText(ParseUser.getCurrentUser().getUsername());
         tvEmail.setText(ParseUser.getCurrentUser().getEmail());
-        tvCollege.setText(ParseUser.getCurrentUser().getEmail());
+        tvCollege.setText(user.getCollegeName());
         queryPosts();
     }
+
+
 
     private void launchCamera() {
         // create Intent to take a picture and return control to the calling application
@@ -188,13 +207,8 @@ public class ProfileFragment extends Fragment {
     }
 
     private void saveProfilePicture() {
-        User user = new User();
-//        ParseUser user2 = user.getCurrentUser();
-        //User user = User.getCurrentUser();
-//        profile.setUser(ParseUser.getCurrentUser());
-        user.setProfilePicture(new ParseFile(profilePicture));
-//        profile.setEmail(ParseUser.getCurrentUser().getEmail());
-        user.saveInBackground(new SaveCallback() {
+
+        User.setCurrentUserProfilePicture(new ParseFile(profilePicture), new SaveCallback() {
             @Override
             public void done(ParseException e) {
                 if(e!=null){
@@ -202,7 +216,7 @@ public class ProfileFragment extends Fragment {
                     Toast.makeText(getContext(), "Error saving profile picture", Toast.LENGTH_SHORT).show();
                 }
                 Log.i(TAG, "Profile picture save was successful");
-//                ivProfile.setImageURI();
+                //ivProfile.setImageResource(0);
             }
         });
     }

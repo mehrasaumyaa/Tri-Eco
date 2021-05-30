@@ -21,6 +21,7 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText etUsername;
     private EditText etPassword;
     private EditText etEmail;
+    private EditText etCollege;
     private Button btnSignUp;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class SignUpActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         etEmail = findViewById(R.id.etEmail);
         btnSignUp = findViewById(R.id.btnSignup);
+        etCollege = findViewById(R.id.etCollege);
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,8 +40,9 @@ public class SignUpActivity extends AppCompatActivity {
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
                 String email = etEmail.getText().toString();
+                String college = etCollege.getText().toString();
 
-                signUpUser(username,password, email);
+                signUpUser(username,password, email, college);
             }
         });
     }
@@ -47,13 +50,15 @@ public class SignUpActivity extends AppCompatActivity {
 
 
 
-    private void signUpUser(String username, String password, String email){
+    private void signUpUser(String username, String password, String email, String college){
         // Create the ParseUser
-        ParseUser user = new ParseUser();
+        User user = new User();
         // Set core properties
+        user.logOut();
         user.setUsername(username);
         user.setPassword(password);
         user.setEmail(email);
+        user.setCollegeName(college);
         // Invoke signUpInBackground
         user.signUpInBackground(new SignUpCallback() {
             public void done(ParseException e) {
