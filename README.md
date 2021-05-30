@@ -30,7 +30,13 @@ Tri-Eco aims to reduce waste by providing a safe and easy method for students to
 **Required Must-have Stories**
 
 - [x] set up Login activity 
+- [x] set up SignUp activity
 - [x] Users can Login
+- [x] Users can signup
+- [x] Users can logout
+- [x] Users can see the item posted by the user displayed on user profile
+- [x] User can see the information entered by the user while signing up displayed on their profile (username, email, college).
+- [x] User can take a picture and save it as their profile picture.
 * Users can register (Name, email, college; Bryn Mawr College, Haverford College, Swarthmore College, Profile)
 - [x] Users can take pictures, write descriptions of items they want to sell, and post
 - [x] Users can take accept or retake picture
@@ -55,7 +61,7 @@ Tri-Eco aims to reduce waste by providing a safe and easy method for students to
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/oshevchuk27/Tri-Eco/blob/main/Tri-Eco-Android/videowalkthrough1.gif' title='Video Walkthrough1' width='' alt='Video Walkthrough1' />
+<img src='https://github.com/oshevchuk27/Tri-Eco/blob/main/Tri-Eco-Android/videowalkthrough2.gif' title='Video Walkthrough1' width='' alt='Video Walkthrough1' />
 
 <img src='https://github.com/oshevchuk27/Tri-Eco/blob/main/Tri-Eco-Android/videowalkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
