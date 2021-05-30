@@ -12,6 +12,8 @@ public class ParseApplication extends Application {
         super.onCreate();
 
         ParseObject.registerSubclass(Sell.class);
+        ParseObject.registerSubclass(Profile.class);
+        ParseObject.registerSubclass(User.class);
         Parse.initialize(new Parse.Configuration.Builder(this)
                 .applicationId("KgscKcV6mTsZRC6x0rnwEBgcHEpNVDOz7r2shrvA")
                 .clientKey("BuxPUiFd3b9o0gxACLHnlAhgakwNDovYqFhOn2qc")

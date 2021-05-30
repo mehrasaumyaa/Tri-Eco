@@ -12,19 +12,19 @@
         android:layout_height="151dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="9dp"
+        app:srcCompat="@drawable/ic_baseline_person_24"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvName"
         android:layout_width="188dp"
         android:layout_height="33dp"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="172dp"
-        android:hint="Name" />
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="217dp"
+        android:layout_toEndOf="@+id/tvNameLabel" />
 
     <TextView
         android:id="@+id/tvCollege"
@@ -32,9 +32,8 @@
         android:layout_height="33dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="216dp"
-        android:hint="College" />
+        android:layout_marginStart="193dp"
+        android:layout_marginTop="275dp" />
 
     <TextView
         android:id="@+id/tvEmail"
@@ -42,11 +41,11 @@
         android:layout_height="33dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="264dp"
-        android:hint="Email" />
+        android:layout_marginStart="193dp"
+        android:layout_marginTop="331dp" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_dash"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/tvEmail"
@@ -58,4 +57,44 @@
         android:layout_marginTop="49dp"
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="-30dp" />
+
+    <TextView
+        android:id="@+id/tvNameLabel"
+        android:layout_width="66dp"
+        android:layout_height="34dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="219dp"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/tvCollegeLabel"
+        android:layout_width="65dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="274dp"
+        android:text="College" />
+
+    <TextView
+        android:id="@+id/tvEmailLabel"
+        android:layout_width="65dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="330dp"
+        android:text="Email" />
+
+    <Button
+        android:id="@+id/btnSaveProfile"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="150dp"
+        android:text="Save" />
 </RelativeLayout>
