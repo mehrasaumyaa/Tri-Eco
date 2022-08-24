@@ -26,7 +26,7 @@ Tri-Eco aims to reduce waste by providing a safe and easy method for students to
 
 ## Product Spec
 
-### 1. User Stories
+### User Stories
 
 - [x] set up Login activity 
 - [x] set up SignUp activity
